@@ -5,18 +5,23 @@
 <meta name="monetag" content="cbea9964695fa37ff8f1c83b9ed280de">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV Angola - Europass Angola</title>
+
+<!-- ZONE 1 - PUSH 12163257 -->
 <script src="https://5gvci.com/act/files/tag.min.js?z=12163257" data-cfasync="false" async></script>
+
+<!-- ZONE 2 - VIGNETTE 12163321 -->
+<script>(function(s){s.dataset.zone='12163321',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+<!-- ZONE 3 - ONCLICK 12163318 - O MAIS LUCRATIVO -->
+<script>(function(s){s.dataset.zone='12163318',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
 <style>
 body{font-family:Arial;background:#eef2ff;padding:20px;margin:0}
 .box{background:#fff;max-width:550px;margin:auto;padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
 h1{text-align:center;color:#1845d0;margin:0;font-size:22px}
-.sub{text-align:center;color:#666;font-size:13px;margin:8px 0 15px 0}
-.models{display:flex;gap:6px;overflow-x:auto;padding:8px 0}
-.models div{border:2px solid #ddd;border-radius:10px;padding:10px 12px;min-width:75px;text-align:center;font-size:12px;cursor:pointer}
-.models div.active{border-color:#1845d0;background:#e0e8ff;font-weight:bold}
+.sub{text-align:center;color:#666;font-size:13px;margin:8px 0 15px}
 input,textarea{width:100%;box-sizing:border-box;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #ccc;font-size:14px}
 button{width:100%;background:#1845d0;color:#fff;border:0;padding:16px;border-radius:10px;font-size:17px;font-weight:bold;margin-top:10px;cursor:pointer}
-button:active{transform:scale(0.98)}
 .verif{font-size:10px;color:#999;text-align:center;margin-top:12px;line-height:14px}
 </style>
 </head>
@@ -24,15 +29,6 @@ button:active{transform:scale(0.98)}
 <div class="box">
 <h1>CV Europass Angola</h1>
 <div class="sub">5 Modelos Grátis - Gera PDF na Hora</div>
-
-<div class="models">
-<div class="active">Europass Oficial</div>
-<div>Moderno Foto</div>
-<div>Minimalista</div>
-<div>Profissional</div>
-<div>Americano H-2A</div>
-</div>
-
 <input id="nome" placeholder="Nome Completo">
 <input id="email" placeholder="Email">
 <input id="tel" placeholder="Telefone / WhatsApp">
@@ -40,22 +36,18 @@ button:active{transform:scale(0.98)}
 <textarea id="form" rows="3" placeholder="Formação Académica"></textarea>
 <textarea id="exp" rows="4" placeholder="Experiência Profissional"></textarea>
 <textarea id="hab" rows="2" placeholder="Habilidades"></textarea>
-
 <button onclick="gerar()">GERAR PDF EUROPASS - BAIXAR</button>
-
-<div class="verif">
-Site Oficial Angola<br>
-Monetag Verificado: cbea9964695fa37ff8f1c83b9ed280de<br>
-Zone: 12163257 - 5gvci.com<br>
-cv-angola.netlify.app
-</div>
+<div class="verif">Site Monetizado - 3 Zones Ativos<br>12163257 + 12163321 + 12163318<br>Verificado: cbea9964695fa37ff8f1c83b9ed280de</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-// Registra Service Worker da Monetag (paga por push)
+const swCode = `self.options = {"dominio": "5gvci.com","zoneId": 12163257}
+self.lary = ""
+importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')`;
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').then(()=>{console.log('SW Monetag OK')});
+  const blob = new Blob([swCode], {type: 'application/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob));
 }
 
 function gerar(){
