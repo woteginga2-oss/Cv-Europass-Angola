@@ -1,101 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-AO">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="monetag" content="cbea9964695fa37ff8f1c83b9ed280de">
-<title>CV Europass Angola - 5 Modelos Grátis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Angola - Europass Angola</title>
+<script src="https://5gvci.com/act/files/tag.min.js?z=12163257" data-cfasync="false" async></script>
 <style>
-body{font-family:Arial;background:#f5f7ff;margin:0;padding:20px}
-.card{background:white;padding:20px;border-radius:12px;max-width:600px;margin:auto;box-shadow:0 4px 20px rgba(0,0,0,.1)}
-h1{color:#1a56db;text-align:center}
-input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
-button{background:#1a56db;color:white;padding:15px;width:100%;border:none;border-radius:8px;font-size:18px;cursor:pointer;margin-top:10px}
-button:hover{background:#1444b0}
-.models{display:flex;gap:8px;overflow:auto;margin:10px 0}
-.model{border:2px solid #ddd;padding:10px;border-radius:8px;cursor:pointer;min-width:100px;text-align:center}
-.model.active{border-color:#1a56db;background:#e8f0ff}
+body{font-family:Arial;background:#eef2ff;padding:20px;margin:0}
+.box{background:#fff;max-width:550px;margin:auto;padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+h1{text-align:center;color:#1845d0;margin:0;font-size:22px}
+.sub{text-align:center;color:#666;font-size:13px;margin:8px 0 15px 0}
+.models{display:flex;gap:6px;overflow-x:auto;padding:8px 0}
+.models div{border:2px solid #ddd;border-radius:10px;padding:10px 12px;min-width:75px;text-align:center;font-size:12px;cursor:pointer}
+.models div.active{border-color:#1845d0;background:#e0e8ff;font-weight:bold}
+input,textarea{width:100%;box-sizing:border-box;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #ccc;font-size:14px}
+button{width:100%;background:#1845d0;color:#fff;border:0;padding:16px;border-radius:10px;font-size:17px;font-weight:bold;margin-top:10px;cursor:pointer}
+button:active{transform:scale(0.98)}
+.verif{font-size:10px;color:#999;text-align:center;margin-top:12px;line-height:14px}
 </style>
 </head>
 <body>
-<div class="card">
+<div class="box">
 <h1>CV Europass Angola</h1>
-<p style="text-align:center">5 Modelos - Gera PDF Grátis</p>
+<div class="sub">5 Modelos Grátis - Gera PDF na Hora</div>
 
 <div class="models">
-<div class="model active" onclick="setModel(0)">Europass<br>Oficial</div>
-<div class="model" onclick="setModel(1)">Moderno<br>Foto</div>
-<div class="model" onclick="setModel(2)">Minimalista</div>
-<div class="model" onclick="setModel(3)">Profissional</div>
-<div class="model" onclick="setModel(4)">Americano<br>H-2A</div>
+<div class="active">Europass Oficial</div>
+<div>Moderno Foto</div>
+<div>Minimalista</div>
+<div>Profissional</div>
+<div>Americano H-2A</div>
 </div>
 
 <input id="nome" placeholder="Nome Completo">
 <input id="email" placeholder="Email">
-<input id="tel" placeholder="Telefone WhatsApp">
+<input id="tel" placeholder="Telefone / WhatsApp">
 <input id="morada" placeholder="Morada - Luanda">
-<textarea id="formacao" placeholder="Formação Académica"></textarea>
-<textarea id="exp" placeholder="Experiência Profissional"></textarea>
-<textarea id="hab" placeholder="Habilidades"></textarea>
+<textarea id="form" rows="3" placeholder="Formação Académica"></textarea>
+<textarea id="exp" rows="4" placeholder="Experiência Profissional"></textarea>
+<textarea id="hab" rows="2" placeholder="Habilidades"></textarea>
 
-<input type="file" id="foto" accept="image/*">
+<button onclick="gerar()">GERAR PDF EUROPASS - BAIXAR</button>
 
-<button onclick="gerarCV()">GERAR PDF EUROPASS - BAIXAR</button>
-
-<p style="font-size:11px;color:grey;text-align:center;margin-top:15px">Monetag + AdMob ativado - App para angolanos</p>
+<div class="verif">
+Site Oficial Angola<br>
+Monetag Verificado: cbea9964695fa37ff8f1c83b9ed280de<br>
+Zone: 12163257 - 5gvci.com<br>
+cv-angola.netlify.app
+</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-let modelo = 0;
-function setModel(n){
- modelo=n;
- document.querySelectorAll('.model').forEach((e,i)=> e.classList.toggle('active', i==n));
- // AQUI VAI MONETAG INTERSTITIAL
- if(window.monetag) monetag.show();
+// Registra Service Worker da Monetag (paga por push)
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js').then(()=>{console.log('SW Monetag OK')});
 }
 
-function gerarCV(){
- // MONETAG ONCLICK AQUI - PAGA QUANDO CLICA
- // Quando tiver Zone ID, coloca script OnClick aqui
- 
- const {jsPDF} = window.jspdf;
- const doc = new jsPDF();
- const nome = document.getElementById('nome').value || 'Meu CV';
- 
- doc.setFillColor(26,86,219);
- doc.rect(0,0,210,30,'F');
- doc.setTextColor(255,255,255);
- doc.setFontSize(18);
- doc.text(nome.toUpperCase(), 15, 20);
- 
- doc.setTextColor(0,0,0);
- doc.setFontSize(12);
- doc.text("Email: " + document.getElementById('email').value, 15, 40);
- doc.text("Tel: " + document.getElementById('tel').value, 15, 47);
- doc.text("Morada: " + document.getElementById('morada').value, 15, 54);
- 
- doc.setFont(undefined,'bold');
- doc.text("FORMACAO:", 15, 65);
- doc.setFont(undefined,'normal');
- doc.text(document.getElementById('formacao').value, 15, 72, {maxWidth:180});
- 
- doc.setFont(undefined,'bold');
- doc.text("EXPERIENCIA:", 15, 100);
- doc.setFont(undefined,'normal');
- doc.text(document.getElementById('exp').value, 15, 107, {maxWidth:180});
- 
- doc.setFont(undefined,'bold');
- doc.text("HABILIDADES:", 15, 135);
- doc.setFont(undefined,'normal');
- doc.text(document.getElementById('hab').value, 15, 142, {maxWidth:180});
- 
- doc.save("CV_Europass_"+nome+".pdf");
- 
- // Abre OnClick depois do download
- alert("CV Gerado! Ver pasta Downloads");
+function gerar(){
+ const {jsPDF}=window.jspdf;
+ const doc=new jsPDF();
+ const nome=document.getElementById('nome').value||'CV';
+ doc.setFillColor(24,69,208); doc.rect(0,0,210,28,'F');
+ doc.setTextColor(255,255,255); doc.setFontSize(16); doc.text(nome.toUpperCase(),14,18);
+ doc.setTextColor(0,0,0); doc.setFontSize(11);
+ doc.text('Email: '+document.getElementById('email').value,14,38);
+ doc.text('Tel: '+document.getElementById('tel').value,14,44);
+ doc.text('Morada: '+document.getElementById('morada').value,14,50);
+ doc.text('FORMACAO:',14,60); doc.text(document.getElementById('form').value,14,66,{maxWidth:180});
+ doc.text('EXPERIENCIA:',14,85); doc.text(document.getElementById('exp').value,14,91,{maxWidth:180});
+ doc.text('HABILIDADES:',14,115); doc.text(document.getElementById('hab').value,14,121,{maxWidth:180});
+ doc.save('CV_Europass_'+nome+'.pdf');
 }
 </script>
-<!-- Monetag OnClick vai aqui depois -->
 </body>
 </html>
