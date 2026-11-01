@@ -16,28 +16,76 @@
 <script>(function(s){s.dataset.zone='12163318',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
 <style>
-body{font-family:Arial;background:#eef2ff;padding:20px;margin:0}
-.box{background:#fff;max-width:550px;margin:auto;padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
-h1{text-align:center;color:#1845d0;margin:0;font-size:22px}
-.sub{text-align:center;color:#666;font-size:13px;margin:8px 0 15px}
-input,textarea{width:100%;box-sizing:border-box;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #ccc;font-size:14px}
-button{width:100%;background:#1845d0;color:#fff;border:0;padding:16px;border-radius:10px;font-size:17px;font-weight:bold;margin-top:10px;cursor:pointer}
-.verif{font-size:10px;color:#999;text-align:center;margin-top:12px;line-height:14px}
+body{font-family:Arial, sans-serif;background:#e6f7f0;padding:20px;margin:0}
+.box{background:#fff;max-width:600px;margin:auto;padding:25px;border-radius:16px;box-shadow:0 10px 35px rgba(0,80,60,.15)}
+h1{text-align:center;color:#0e6b4b;margin:0;font-size:24px}
+.sub{text-align:center;color:#4a7c6a;font-size:13px;margin:8px 0 20px;font-weight:500}
+input,textarea{width:100%;box-sizing:border-box;padding:12px 14px;margin:8px 0;border-radius:10px;border:1.5px solid #b8d9cc;font-size:14px;background:#f7fcf9;transition:border .2s}
+input:focus,textarea:focus{outline:none;border-color:#0e6b4b;background:#fff}
+button{width:100%;background:#0e6b4b;color:#fff;border:0;padding:16px;border-radius:12px;font-size:17px;font-weight:bold;margin-top:12px;cursor:pointer;transition:background .2s}
+button:hover{background:#0a5239}
+.verif{font-size:10px;color:#7a9e8e;text-align:center;margin-top:14px;line-height:15px}
+label{font-size:12px;font-weight:bold;color:#0e6b4b;margin-top:6px;display:block;text-transform:uppercase;letter-spacing:.4px}
 </style>
 </head>
 <body>
 <div class="box">
 <h1>CV Europass Angola</h1>
-<div class="sub">5 Modelos Grátis - Gera PDF na Hora</div>
-<input id="nome" placeholder="Nome Completo">
-<input id="email" placeholder="Email">
-<input id="tel" placeholder="Telefone / WhatsApp">
-<input id="morada" placeholder="Morada - Luanda">
-<textarea id="form" rows="3" placeholder="Formação Académica"></textarea>
-<textarea id="exp" rows="4" placeholder="Experiência Profissional"></textarea>
-<textarea id="hab" rows="2" placeholder="Habilidades"></textarea>
-<button onclick="gerar()">GERAR PDF EUROPASS - BAIXAR</button>
-<div class="verif">Site Monetizado - 3 Zones Ativos<br>12163257 + 12163321 + 12163318<br>Verificado: cbea9964695fa37ff8f1c83b9ed280de</div>
+<div class="sub">5 Modelos Grátis — Gera PDF na Hora</div>
+
+<label>Nome Completo</label>
+<input id="nome" placeholder="Nome Completo" value="Wote Adriano Cicola Ginga">
+
+<label>Email</label>
+<input id="email" placeholder="Email" value="woteginga2@gmail.com">
+
+<label>Telefone / WhatsApp</label>
+<input id="tel" placeholder="Telefone" value="944984084">
+
+<label>Morada</label>
+<input id="morada" placeholder="Morada - Luanda" value="Luanda, Angola">
+
+<label>Data de Nascimento / Nº Identificação</label>
+<input id="nasc" placeholder="Data de Nascimento / Nº Identificação" value="23/06/2006 | Nº 008970390LA042">
+
+<label>Perfil</label>
+<textarea id="perfil" rows="3" placeholder="Perfil Profissional">Profissional dinâmico, proactivo e responsável, com boa capacidade de comunicação e relações interpessoais, facilidade de trabalho em equipa e excelente capacidade de adaptação e aprendizagem. Formação média em Energias Renováveis, com experiência prática adquirida durante estágios curriculares em diferentes áreas.</textarea>
+
+<label>Formação Académica</label>
+<textarea id="form" rows="3" placeholder="Formação Académica">Ensino Médio concluído — Energias Renováveis
+Instituto Médio de Saúde de Luanda — Energias Renováveis
+9.ª Classe — Escola Povo em Luta (1023)</textarea>
+
+<label>Experiência Profissional</label>
+<textarea id="exp" rows="4" placeholder="Experiência Profissional">• Ajudante de pedreira
+• Ajudante de cozinha
+• Recepcionista
+• Auxiliar de limpeza
+• Empregado de mesa</textarea>
+
+<label>Cursos e Competências</label>
+<textarea id="hab" rows="3" placeholder="Habilidades">• Informática na Óptica do Utilizador
+• Operador de Caixa
+• Operador de Limpeza
+• Operador de Loja
+• Atendimento ao público
+• Construção Civil</textarea>
+
+<label>Estágios Profissionais</label>
+<textarea id="estagios" rows="4" placeholder="Estágios">Epidemiologia e Estatística — Hospital Geral de Luanda (Neves Bendinha) | 02/02/2023 – 09/05/2023
+• Recolha, registo e organização de dados epidemiológicos; vigilância epidemiológica; tratamento e análise de dados estatísticos em saúde; apoio na elaboração de relatórios; colaboração em acções de Informação, Educação e Comunicação em Saúde; cumprimento das normas éticas e de confidencialidade.
+
+Enfermagem e Patologia Médico-Cirúrgica — Hospital Maria Pia | 05/04/2024 – 19/11/2024
+• Prestação de cuidados gerais de enfermagem a utentes internados; observação clínica e acompanhamento dos pacientes; apoio na administração de terapêutica sob orientação da equipa de enfermagem; aplicação das normas de biossegurança e higiene hospitalar; trabalho em equipa multidisciplinar.</textarea>
+
+<label>Idiomas</label>
+<input id="idiomas" placeholder="Idiomas" value="Português: fluente (falado e escrito) | Inglês: básico">
+
+<label>Objetivo Profissional</label>
+<textarea id="objetivo" rows="2" placeholder="Objetivo">Integrar uma equipa de trabalho onde possa demonstrar as minhas competências, desenvolver as minhas habilidades e contribuir para o crescimento da organização.</textarea>
+
+<button onclick="gerar()">GERAR PDF EUROPASS — BAIXAR</button>
+<div class="verif">Site Monetizado — 3 Zones Ativos<br>12163257 + 12163321 + 12163318<br>Verificado: cbea9964695fa37ff8f1c83b9ed280de</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -54,15 +102,63 @@ function gerar(){
  const {jsPDF}=window.jspdf;
  const doc=new jsPDF();
  const nome=document.getElementById('nome').value||'CV';
- doc.setFillColor(24,69,208); doc.rect(0,0,210,28,'F');
- doc.setTextColor(255,255,255); doc.setFontSize(16); doc.text(nome.toUpperCase(),14,18);
- doc.setTextColor(0,0,0); doc.setFontSize(11);
- doc.text('Email: '+document.getElementById('email').value,14,38);
- doc.text('Tel: '+document.getElementById('tel').value,14,44);
- doc.text('Morada: '+document.getElementById('morada').value,14,50);
- doc.text('FORMACAO:',14,60); doc.text(document.getElementById('form').value,14,66,{maxWidth:180});
- doc.text('EXPERIENCIA:',14,85); doc.text(document.getElementById('exp').value,14,91,{maxWidth:180});
- doc.text('HABILIDADES:',14,115); doc.text(document.getElementById('hab').value,14,121,{maxWidth:180});
+
+ // Cabeçalho verde
+ doc.setFillColor(14,107,75); // verde escuro
+ doc.rect(0,0,210,30,'F');
+ doc.setTextColor(255,255,255);
+ doc.setFontSize(16);
+ doc.text(nome.toUpperCase(),14,18);
+
+ doc.setTextColor(0,0,0);
+ doc.setFontSize(10);
+
+ let y = 40;
+ const linha = (label, valor) => {
+   if(!valor) return;
+   doc.setFont(undefined,'bold');
+   doc.setTextColor(14,107,75);
+   doc.text(label,14,y);
+   doc.setFont(undefined,'normal');
+   doc.setTextColor(0,0,0);
+   const linhas = doc.splitTextToSize(valor, 170);
+   doc.text(linhas, 45, y);
+   y += (linhas.length * 5) + 3;
+ };
+
+ linha('Email:', document.getElementById('email').value);
+ linha('Telefone:', document.getElementById('tel').value);
+ linha('Morada:', document.getElementById('morada').value);
+ linha('Nasc./ID:', document.getElementById('nasc').value);
+
+ y += 2;
+ const secao = (titulo, valor) => {
+   if(!valor) return;
+   doc.setDrawColor(14,107,75);
+   doc.setLineWidth(0.5);
+   doc.line(14, y, 196, y);
+   y += 6;
+   doc.setFont(undefined,'bold');
+   doc.setTextColor(14,107,75);
+   doc.setFontSize(12);
+   doc.text(titulo,14,y);
+   y += 6;
+   doc.setFont(undefined,'normal');
+   doc.setTextColor(0,0,0);
+   doc.setFontSize(10);
+   const linhas = doc.splitTextToSize(valor, 180);
+   doc.text(linhas, 14, y);
+   y += (linhas.length * 5) + 4;
+ };
+
+ secao('PERFIL', document.getElementById('perfil').value);
+ secao('HABILITAÇÕES ACADÉMICAS', document.getElementById('form').value);
+ secao('EXPERIÊNCIA PROFISSIONAL', document.getElementById('exp').value);
+ secao('CURSOS E COMPETÊNCIAS', document.getElementById('hab').value);
+ secao('ESTÁGIOS PROFISSIONAIS', document.getElementById('estagios').value);
+ secao('IDIOMAS', document.getElementById('idiomas').value);
+ secao('OBJECTIVO PROFISSIONAL', document.getElementById('objetivo').value);
+
  doc.save('CV_Europass_'+nome+'.pdf');
 }
 </script>
