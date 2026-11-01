@@ -16,78 +16,65 @@
 <script>(function(s){s.dataset.zone='12163318',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
 <style>
-body{font-family:Arial, sans-serif;background:#e6f7f0;padding:20px;margin:0}
-.box{background:#fff;max-width:600px;margin:auto;padding:25px;border-radius:16px;box-shadow:0 10px 35px rgba(0,80,60,.15)}
-h1{text-align:center;color:#0e6b4b;margin:0;font-size:24px}
-.sub{text-align:center;color:#4a7c6a;font-size:13px;margin:8px 0 20px;font-weight:500}
-input,textarea{width:100%;box-sizing:border-box;padding:12px 14px;margin:8px 0;border-radius:10px;border:1.5px solid #b8d9cc;font-size:14px;background:#f7fcf9;transition:border .2s}
-input:focus,textarea:focus{outline:none;border-color:#0e6b4b;background:#fff}
-button{width:100%;background:#0e6b4b;color:#fff;border:0;padding:16px;border-radius:12px;font-size:17px;font-weight:bold;margin-top:12px;cursor:pointer;transition:background .2s}
-button:hover{background:#0a5239}
-.verif{font-size:10px;color:#7a9e8e;text-align:center;margin-top:14px;line-height:15px}
-label{font-size:12px;font-weight:bold;color:#0e6b4b;margin-top:6px;display:block;text-transform:uppercase;letter-spacing:.4px}
+body{font-family:Arial;background:#eef2ff;padding:20px;margin:0}
+.box{background:#fff;max-width:550px;margin:auto;padding:22px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+h1{text-align:center;color:#1845d0;margin:0;font-size:22px}
+.sub{text-align:center;color:#666;font-size:13px;margin:8px 0 15px}
+input,textarea{width:100%;box-sizing:border-box;padding:12px;margin:6px 0;border-radius:8px;border:1px solid #ccc;font-size:14px}
+button{width:100%;background:#1845d0;color:#fff;border:0;padding:16px;border-radius:10px;font-size:17px;font-weight:bold;margin-top:10px;cursor:pointer}
+.verif{font-size:10px;color:#999;text-align:center;margin-top:12px;line-height:14px}
+.file-label { display: block; margin: 10px 0 5px; font-size: 14px; font-weight: bold; color: #333; }
 </style>
 </head>
 <body>
 <div class="box">
 <h1>CV Europass Angola</h1>
-<div class="sub">5 Modelos Grátis — Gera PDF na Hora</div>
+<div class="sub">Gera o teu CV Profissional com Foto</div>
 
-<label>Nome Completo</label>
+<label class="file-label">Foto de Perfil (Obrigatório):</label>
+<input type="file" id="foto" accept="image/*">
+
 <input id="nome" placeholder="Nome Completo" value="Wote Adriano Cicola Ginga">
-
-<label>Email</label>
 <input id="email" placeholder="Email" value="woteginga2@gmail.com">
+<input id="tel" placeholder="Telefone / WhatsApp" value="944984084">
+<input id="data" placeholder="Data de Nascimento" value="23/06/2006">
+<input id="id" placeholder="Nº de Identificação" value="008970390LA042">
+<input id="morada" placeholder="Localização" value="Luanda, Angola">
 
-<label>Telefone / WhatsApp</label>
-<input id="tel" placeholder="Telefone" value="944984084">
+<textarea id="perfil" rows="3" placeholder="Perfil (Resumo)">Profissional dinâmico, proactivo e responsável, com boa capacidade de comunicação e relações interpessoais, facilidade de trabalho em equipa e excelente capacidade de adaptação e aprendizagem.</textarea>
 
-<label>Morada</label>
-<input id="morada" placeholder="Morada - Luanda" value="Luanda, Angola">
+<textarea id="form" rows="3" placeholder="Habilitações Académicas">Ensino Médio concluído — Energias Renováveis
+Instituto Médio de Saúde de Luanda — Energias Renováveis.
+9.ª Classe — Escola Povo em Luta (1023).</textarea>
 
-<label>Data de Nascimento / Nº Identificação</label>
-<input id="nasc" placeholder="Data de Nascimento / Nº Identificação" value="23/06/2006 | Nº 008970390LA042">
-
-<label>Perfil</label>
-<textarea id="perfil" rows="3" placeholder="Perfil Profissional">Profissional dinâmico, proactivo e responsável, com boa capacidade de comunicação e relações interpessoais, facilidade de trabalho em equipa e excelente capacidade de adaptação e aprendizagem. Formação média em Energias Renováveis, com experiência prática adquirida durante estágios curriculares em diferentes áreas.</textarea>
-
-<label>Formação Académica</label>
-<textarea id="form" rows="3" placeholder="Formação Académica">Ensino Médio concluído — Energias Renováveis
-Instituto Médio de Saúde de Luanda — Energias Renováveis
-9.ª Classe — Escola Povo em Luta (1023)</textarea>
-
-<label>Experiência Profissional</label>
 <textarea id="exp" rows="4" placeholder="Experiência Profissional">• Ajudante de pedreira
 • Ajudante de cozinha
 • Recepcionista
 • Auxiliar de limpeza
 • Empregado de mesa</textarea>
 
-<label>Cursos e Competências</label>
-<textarea id="hab" rows="3" placeholder="Habilidades">• Informática na Óptica do Utilizador
+<textarea id="cursos" rows="3" placeholder="Cursos e Competências">• Informática na Óptica do Utilizador
 • Operador de Caixa
 • Operador de Limpeza
 • Operador de Loja
 • Atendimento ao público
 • Construção Civil</textarea>
 
-<label>Estágios Profissionais</label>
-<textarea id="estagios" rows="4" placeholder="Estágios">Epidemiologia e Estatística — Hospital Geral de Luanda (Neves Bendinha) | 02/02/2023 – 09/05/2023
-• Recolha, registo e organização de dados epidemiológicos; vigilância epidemiológica; tratamento e análise de dados estatísticos em saúde; apoio na elaboração de relatórios; colaboração em acções de Informação, Educação e Comunicação em Saúde; cumprimento das normas éticas e de confidencialidade.
+<textarea id="estagios" rows="4" placeholder="Estágios Profissionais">Epidemiologia e Estatística — Hospital Geral de Luanda | 02/02/2023 – 09/05/2023
+• Recolha, registo e organização de dados epidemiológicos.
 
-Enfermagem e Patologia Médico-Cirúrgica — Hospital Maria Pia | 05/04/2024 – 19/11/2024
-• Prestação de cuidados gerais de enfermagem a utentes internados; observação clínica e acompanhamento dos pacientes; apoio na administração de terapêutica sob orientação da equipa de enfermagem; aplicação das normas de biossegurança e higiene hospitalar; trabalho em equipa multidisciplinar.</textarea>
+Enfermagem — Hospital Maria Pia | 05/04/2024 – 19/11/2024
+• Prestação de cuidados gerais de enfermagem.</textarea>
 
-<label>Idiomas</label>
-<input id="idiomas" placeholder="Idiomas" value="Português: fluente (falado e escrito) | Inglês: básico">
+<textarea id="idiomas" rows="2" placeholder="Idiomas">• Português: fluente (falado e escrito) • Inglês: básico</textarea>
 
-<label>Objetivo Profissional</label>
-<textarea id="objetivo" rows="2" placeholder="Objetivo">Integrar uma equipa de trabalho onde possa demonstrar as minhas competências, desenvolver as minhas habilidades e contribuir para o crescimento da organização.</textarea>
+<textarea id="objetivo" rows="3" placeholder="Objectivo Profissional">Integrar uma equipa de trabalho onde possa demonstrar as minhas competências, desenvolver as minhas habilidades e contribuir para o crescimento da organização.</textarea>
 
-<button onclick="gerar()">GERAR PDF EUROPASS — BAIXAR</button>
-<div class="verif">Site Monetizado — 3 Zones Ativos<br>12163257 + 12163321 + 12163318<br>Verificado: cbea9964695fa37ff8f1c83b9ed280de</div>
+<button onclick="gerar()">GERAR PDF EUROPASS - BAIXAR</button>
+<div class="verif">Site Monetizado - 3 Zones Ativos<br>12163257 + 12163321 + 12163318<br>Verificado: cbea9964695fa37ff8f1c83b9ed280de</div>
 </div>
 
+<!-- Biblioteca jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 const swCode = `self.options = {"dominio": "5gvci.com","zoneId": 12163257}
@@ -98,68 +85,147 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.register(URL.createObjectURL(blob));
 }
 
-function gerar(){
+// Função para converter ficheiro em Base64 (necessário para o jsPDF)
+function getBase64(file) {
+   return new Promise((resolve, reject) => {
+     const reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = () => resolve(reader.result);
+     reader.onerror = error => reject(error);
+   });
+}
+
+async function gerar(){
  const {jsPDF}=window.jspdf;
  const doc=new jsPDF();
+ 
  const nome=document.getElementById('nome').value||'CV';
+ const email=document.getElementById('email').value;
+ const tel=document.getElementById('tel').value;
+ const dataNasc=document.getElementById('data').value;
+ const idNum=document.getElementById('id').value;
+ const morada=document.getElementById('morada').value;
+ const perfil=document.getElementById('perfil').value;
+ const formacao=document.getElementById('form').value;
+ const exp=document.getElementById('exp').value;
+ const cursos=document.getElementById('cursos').value;
+ const estagios=document.getElementById('estagios').value;
+ const idiomas=document.getElementById('idiomas').value;
+ const objetivo=document.getElementById('objetivo').value;
 
- // Cabeçalho verde
- doc.setFillColor(14,107,75); // verde escuro
- doc.rect(0,0,210,30,'F');
- doc.setTextColor(255,255,255);
- doc.setFontSize(16);
- doc.text(nome.toUpperCase(),14,18);
+ // Cores
+ const azulEuropass = [24, 69, 208];
+ const cinzaLinha = [200, 200, 200];
 
- doc.setTextColor(0,0,0);
- doc.setFontSize(10);
+ // 1. CABEÇALHO (Logótipo)
+ // NOTA: O ficheiro 'europass.png' TEM de estar na mesma pasta.
+ try {
+   doc.addImage("europass.png", "PNG", 70, 10, 70, 15); 
+ } catch(e) {
+   doc.setTextColor(128, 0, 128); // Roxo
+   doc.setFontSize(22); doc.setFont("helvetica", "bold");
+   doc.text("europass", 85, 20);
+ }
 
- let y = 40;
- const linha = (label, valor) => {
-   if(!valor) return;
-   doc.setFont(undefined,'bold');
-   doc.setTextColor(14,107,75);
-   doc.text(label,14,y);
-   doc.setFont(undefined,'normal');
-   doc.setTextColor(0,0,0);
-   const linhas = doc.splitTextToSize(valor, 170);
-   doc.text(linhas, 45, y);
-   y += (linhas.length * 5) + 3;
- };
+ // Linha do cabeçalho
+ doc.setDrawColor(...cinzaLinha);
+ doc.setLineWidth(0.5);
+ doc.line(14, 30, 196, 30);
 
- linha('Email:', document.getElementById('email').value);
- linha('Telefone:', document.getElementById('tel').value);
- linha('Morada:', document.getElementById('morada').value);
- linha('Nasc./ID:', document.getElementById('nasc').value);
+ // 2. FOTO E DADOS PESSOAIS
+ const fotoInput = document.getElementById('foto');
+ let textoY = 45; // Posição vertical inicial para o texto ao lado da foto
 
- y += 2;
- const secao = (titulo, valor) => {
-   if(!valor) return;
-   doc.setDrawColor(14,107,75);
-   doc.setLineWidth(0.5);
-   doc.line(14, y, 196, y);
-   y += 6;
-   doc.setFont(undefined,'bold');
-   doc.setTextColor(14,107,75);
-   doc.setFontSize(12);
-   doc.text(titulo,14,y);
-   y += 6;
-   doc.setFont(undefined,'normal');
-   doc.setTextColor(0,0,0);
-   doc.setFontSize(10);
-   const linhas = doc.splitTextToSize(valor, 180);
-   doc.text(linhas, 14, y);
-   y += (linhas.length * 5) + 4;
- };
+ if (fotoInput.files.length > 0) {
+     const file = fotoInput.files[0];
+     const base64Image = await getBase64(file);
+     
+     // Desenha a moldura cinzenta (círculo)
+     doc.setDrawColor(180, 180, 180);
+     doc.setLineWidth(1);
+     doc.circle(35, 48, 20, 'S'); // x, y, raio, estilo (S = Stroke/borda)
 
- secao('PERFIL', document.getElementById('perfil').value);
- secao('HABILITAÇÕES ACADÉMICAS', document.getElementById('form').value);
- secao('EXPERIÊNCIA PROFISSIONAL', document.getElementById('exp').value);
- secao('CURSOS E COMPETÊNCIAS', document.getElementById('hab').value);
- secao('ESTÁGIOS PROFISSIONAIS', document.getElementById('estagios').value);
- secao('IDIOMAS', document.getElementById('idiomas').value);
- secao('OBJECTIVO PROFISSIONAL', document.getElementById('objetivo').value);
+     // Desenha a imagem (recortada para parecer redonda visualmente dentro do círculo)
+     doc.addImage(base64Image, 'JPEG', 15, 28, 40, 40);
+ } else {
+     // Se não houver foto, desenha um círculo vazio
+     doc.setDrawColor(180, 180, 180);
+     doc.setLineWidth(1);
+     doc.circle(35, 48, 20, 'S');
+     textoY = 35; // Sobe o texto se não houver foto
+ }
 
- doc.save('CV_Europass_'+nome+'.pdf');
+ // Nome ao lado da foto
+ doc.setTextColor(50, 50, 50); 
+ doc.setFontSize(18); doc.setFont("helvetica", "bold");
+ doc.text(nome, 65, 35);
+
+ // Dados Pessoais
+ doc.setFontSize(10); doc.setFont("helvetica", "normal");
+ doc.setTextColor(80, 80, 80);
+ 
+ let dadosY = 42;
+ doc.text(`E-mail: ${email}`, 65, dadosY); dadosY += 5;
+ doc.text(`Telemóvel: ${tel}`, 65, dadosY); dadosY += 5;
+ doc.text(`Data de nascimento: ${dataNasc}`, 65, dadosY); dadosY += 5;
+ doc.text(`N.º de identificação: ${idNum}`, 65, dadosY); dadosY += 5;
+ doc.text(`Localização: ${morada}`, 65, dadosY); dadosY += 5;
+
+ // Linha separadora
+ doc.line(14, 75, 196, 75);
+
+ // 3. SECÇÕES DE TEXTO (Função auxiliar para desenhar os títulos)
+ let y = 85;
+ const marginLeft = 14;
+ const maxLineWidth = 180;
+
+ function drawSection(title, content) {
+    if(!content) return;
+    doc.setTextColor(...azulEuropass);
+    doc.setFontSize(12); doc.setFont("helvetica", "bold");
+    doc.text(title.toUpperCase(), marginLeft, y);
+    y += 6;
+
+    doc.setTextColor(50, 50, 50);
+    doc.setFontSize(10); doc.setFont("helvetica", "normal");
+    
+    // Quebra de linha automática
+    const lines = doc.splitTextToSize(content, maxLineWidth);
+    lines.forEach(line => {
+        // Verifica se a página está cheia
+        if(y > 275) {
+            doc.addPage();
+            y = 20;
+        }
+        doc.text(line, marginLeft, y);
+        y += 5;
+    });
+    y += 6; // Espaço extra após a secção
+ }
+
+ // Desenha as secções
+ drawSection("PERFIL", perfil);
+ drawSection("HABILITAÇÕES ACADÉMICAS", formacao);
+ drawSection("EXPERIÊNCIA PROFISSIONAL", exp);
+ drawSection("CURSOS E COMPETÊNCIAS", cursos);
+ drawSection("ESTÁGIOS PROFISSIONAIS", estagios);
+ drawSection("IDIOMAS", idiomas);
+ drawSection("OBJECTIVO PROFISSIONAL", objetivo);
+
+ // 4. RODAPÉ
+ // Adiciona rodapé a todas as páginas geradas
+ const totalPages = doc.internal.getNumberOfPages();
+ for(let i = 1; i <= totalPages; i++) {
+     doc.setPage(i);
+     doc.setDrawColor(...cinzaLinha);
+     doc.line(14, 285, 196, 285);
+     doc.setTextColor(150, 150, 150);
+     doc.setFontSize(8); doc.setFont("helvetica", "normal");
+     doc.text("Europass — Curriculum Vitae", 14, 290);
+     doc.text(`Página ${i}`, 180, 290);
+ }
+
+ doc.save('CV_Europass_'+nome.split(' ')[0]+'.pdf');
 }
 </script>
 </body>
